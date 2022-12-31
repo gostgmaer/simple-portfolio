@@ -1,0 +1,48 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  height: 50px;
+  .headerleft {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .contact {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+      font-size: 16px;
+      .phone {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      .email {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+    }
+  }
+  .headerright {
+    .hamburger {
+        svg{
+            width: 30px ;
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+  }
+}

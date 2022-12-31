@@ -1,0 +1,25 @@
+.Card {
+    width: 32.013%;
+  .cardWrapper {
+   position: relative;
+   width: 100%;
+    .cardImage {
+        width: 100%;
+        img{
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+    }
+    .cardContent {
+        position: absolute;
+        top: 0;
+      .cardHeading {
+        font-size: 14px;
+      }
+      .Carddetails {
+        font-size: 12px;
+      }
+    }
+  }
+}
