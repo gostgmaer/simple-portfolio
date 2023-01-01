@@ -1,0 +1,28 @@
+.Sidebar{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 25%;
+    background-color: black;
+    z-index: 111;
+    .sidebarWrapper{
+        position: sticky;
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between  ;
+            padding: 10px;
+            .logo{
+                color: white;
+
+            }
+            .close{
+                color: white;
+                svg{
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}

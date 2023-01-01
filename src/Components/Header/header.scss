@@ -37,12 +37,29 @@
     }
   }
   .headerright {
+    display: flex;
+    align-items: center;
+    gap: 50px;
     .hamburger {
         svg{
             width: 30px ;
             height: 30px;
             cursor: pointer;
         }
+    }
+    .resume{
+      button{
+        border: none;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+          outline-style: solid;
+          outline-color: rgb(0, 72, 255);
+
+          
+        }
+      }
     }
   }
 }
