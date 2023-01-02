@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './contact.scss'
 const ContactForm = () => {
   return (
-    <div>ContactForm</div>
+    <div className='ContactForm'>ContactForm</div>
   )
 }
 

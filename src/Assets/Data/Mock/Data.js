@@ -1,13 +1,13 @@
 export const Mock = {
     "portFolioFilter":[{
         "id": 1,
-        "text": "MKI"
+        "text": "UI Design"
       }, {
         "id": 2,
-        "text": "UMI"
+        "text": "Apps"
       }, {
         "id": 3,
-        "text": "SGO"
+        "text": "Full Stack"
       }, {
         "id": 4,
         "text": "CUI"

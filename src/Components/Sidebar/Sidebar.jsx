@@ -11,11 +11,13 @@ const Sidebar = () => {
     <div className='Sidebar'>
         <div className="sidebarWrapper">
             <div className="header">
-                <div className="logo"></div>
+                <div className="logo">Hi There</div>
                 <div className="close"><MdClose onClick={toggleSidebarShow}></MdClose></div>
             </div>
-            <div className="content"></div>
-            <div className="footer"></div>
+            <div className="content">
+              <ul className="navitems"><li></li></ul>
+            </div>
+            <div className="footer"><ul className='SocialMedia'><li></li></ul></div>
         </div>
     </div>
   )
