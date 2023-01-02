@@ -1,28 +1,68 @@
-.Sidebar{
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    width: 25%;
-    background-color: black;
-    z-index: 111;
-    .sidebarWrapper{
-        position: sticky;
-        .header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between  ;
-            padding: 10px;
-            .logo{
-                color: white;
+// .Sidebar{
+//     position: fixed;
+//    // display: none;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: 111;
+//     background-color: rgba(0, 0, 0, 0.402);
+//    // z-index: 2;
+//     // cursor: pointer;
+//     .sidebarWrapper{
+//         height: 100vh;
+//         position: absolute;
+//         top: 0;
+//         width: 25%;
+//         background-color: black;
+//        // z-index: 111;
+//         position: sticky;
+        
+//         .header{
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between  ;
+//             padding: 50px 30px;
+//             .logo{
+//                 color: white;
+//                 text-transform: uppercase;
+//                 font-size: 20px;
 
-            }
-            .close{
-                color: white;
-                svg{
-                    cursor: pointer;
-                }
-            }
-        }
+//             }
+//             .close{
+//                 color: white;
+//                 svg{
+//                     cursor: pointer;
+//                 }
+//             }
+//         }
+//         .content{
+//             padding: 50px 30px;
+//             .navitems{
+//                 flex-direction: column;
+//              //   justify-content: start;
+//                 align-items: baseline;
+//                 font-size: 20px;
 
-    }
-}
+//                 li{
+//                     a{
+//                         color: white;
+//                         text-transform: capitalize;
+//                     }
+                    
+//                 }
+//             }
+
+//         }
+//         .footer{
+//             .SocialMedia{
+//                 li{
+
+//                 }
+//             }
+//         }
+
+//     }
+// }
