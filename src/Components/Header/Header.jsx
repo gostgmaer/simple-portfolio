@@ -2,6 +2,7 @@ import React from "react";
 import "./header.scss";
 import {
   MdCall,
+  MdClose,
   MdDocumentScanner,
   MdEmail,
   MdMenu,
@@ -9,16 +10,20 @@ import {
   MdPerson,
 } from "react-icons/md";
 import { useGlobalContext } from "../../Contexts/GlobalContext";
+import { Link } from "react-router-dom";
+import { Mock } from "../../Assets/Data/Mock/Data";
 const Header = () => {
-  const { toggleSidebarShow } = useGlobalContext();
+  const { toggleSidebarShow, toggleSidebar } = useGlobalContext();
 
   const DownloadResume = () => {};
 
   return (
-    <header className="Header">
+    <header className={`Header ${toggleSidebar&& 'active'}`}>
       <div className="headerWrapper">
         <div className="headerleft">
-          <div className="logo">Kishor</div>
+          <div className="logo">
+            <a href="#intro">Kishor</a>
+          </div>
           <div className="contact">
             <div className="phone">
               <MdCall></MdCall>
@@ -35,7 +40,12 @@ const Header = () => {
             <button onClick={DownloadResume}>Resume</button>
           </div>
           <div className="hamburger">
-            <MdMenu onClick={toggleSidebarShow}></MdMenu>
+            {toggleSidebar ? (
+              <MdClose onClick={toggleSidebarShow}></MdClose>
+            ) : (
+              <MdMenu onClick={toggleSidebarShow}></MdMenu>
+            )}
+           
           </div>
         </div>
       </div>

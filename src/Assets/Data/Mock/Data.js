@@ -1611,5 +1611,31 @@ export const Mock = {
                 }
             }
         }
-    ]
+    ],
+    "Navigation":[{
+        "id": 1,
+        "text": "Intro",
+        "url": "intro",
+        "avatar": "https://robohash.org/nobisautemrepellat.png?size=50x50&set=set1"
+      }, {
+        "id": 2,
+        "text": "Portfolio",
+        "url": "portfolio",
+        "avatar": "https://robohash.org/reprehenderitperferendisvitae.png?size=50x50&set=set1"
+      }, {
+        "id": 3,
+        "text": "projects",
+        "url": "projects",
+        "avatar": "https://robohash.org/suntvoluptasfacere.png?size=50x50&set=set1"
+      }, {
+        "id": 4,
+        "text": "testimonial",
+        "url": "testimonial",
+        "avatar": "https://robohash.org/fugiatdignissimosqui.png?size=50x50&set=set1"
+      }, {
+        "id": 5,
+        "text": "contact",
+        "url": "contact",
+        "avatar": "https://robohash.org/reiciendisblanditiiscommodi.png?size=50x50&set=set1"
+      }]
 }

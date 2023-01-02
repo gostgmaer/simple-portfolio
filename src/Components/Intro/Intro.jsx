@@ -2,7 +2,7 @@ import React from 'react'
 import './intro.scss'
 const Intro = () => {
   return (
-    <div className='Intro'>Intro</div>
+    <div className='Intro' id='intro'></div>
   )
 }
 

@@ -41,6 +41,7 @@
   .section {
     position: relative;
     background-color: #61dafb;
+    scroll-behavior: smooth;
     width: 100%;
     height: calc(100vh - 70px);
     top: 70px;

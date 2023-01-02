@@ -2,7 +2,7 @@ import React from 'react'
 import './contact.scss'
 const ContactForm = () => {
   return (
-    <div className='ContactForm'>ContactForm</div>
+    <div className='ContactForm' id='contact'>ContactForm</div>
   )
 }
 

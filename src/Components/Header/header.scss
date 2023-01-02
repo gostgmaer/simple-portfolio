@@ -1,19 +1,27 @@
+@import '../../index.scss';
+
 .Header {
-  // display: flex;
+   display: flex;
+   transition: 0.5s all ease;
   // justify-content: space-between;
-  // align-items: center;
+   align-items: center;
   // // margin: 0 20px;
-  // width: 100%;
+   width: 100%;
    position: fixed;
    z-index: 2;
    top: 0;
-   color: white;
+   color: rgb(3, 3, 3);
    height: 70px;
   // color: white;
-   background-color: #15023a;
+   background-color: #fff;
   // padding: 0 50px;
   width: 100%;
   .headerWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    width: 100%;
     .headerleft {
       display: flex;
       gap: 50px;
@@ -23,6 +31,9 @@
         font-weight: bold;
         text-transform: uppercase;
         cursor: pointer;
+        a{
+          color: black;
+        }
       }
       .contact {
         display: flex;
@@ -71,5 +82,102 @@
       }
     }
   }
+  &.active{
+    background-color: $mainColor;
+    color: white;
+    svg{
+      color: white !important;
+    }
+    a{
+      color: white !important;
+    }
+    .phone{
+      color: white !important;
+
+    }
+    .email{
+      color: white !important;
+
+    }
+    .hamburger{ color: white !important;}
+  
+  }
  
+}
+
+
+
+
+.Sidebar{
+  position: fixed;
+ // display: none;
+ // width: 100%;
+  height: 100%;
+  width: 25%;
+   top: 70px;
+  // left: 0;
+   right: 0;
+  bottom: 0;
+  z-index: 111;
+  background-color: rgba(0, 0, 0, 0.059);
+ // z-index: 2;
+  // cursor: pointer;
+  .sidebarWrapper{
+      height: 100vh;
+     // position: absolute;
+      top: 0;
+      width: 100%;
+      background-color: $mainColor;
+     // z-index: 111;
+      position: sticky;
+      
+      .header{
+          display: flex;
+          align-items: center;
+          justify-content: space-between  ;
+          padding: 50px 30px;
+          .logo{
+              color: white;
+              text-transform: uppercase;
+              font-size: 20px;
+
+          }
+          .close{
+              color: white;
+              svg{
+                  cursor: pointer;
+              }
+          }
+      }
+      .content{
+          padding: 50px 30px;
+          .navitems{
+              flex-direction: column;
+           //   justify-content: start;
+              align-items: baseline;
+              font-size: 20px;
+
+              li{
+                  a{
+                      color: rgb(201, 201, 201);
+                      text-transform: capitalize;
+                      &:hover{
+                        font-weight: bold;
+                        color: rgb(244, 243, 243);
+                      }
+                  }
+                  
+              }
+          }
+
+      }
+      .footer{
+          .SocialMedia{
+              li{
+
+              }
+          }
+      }
+
+  }
 }
