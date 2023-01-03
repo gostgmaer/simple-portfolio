@@ -1,33 +1,34 @@
 .Card {
   width: 32.013%;
+ 
   .cardWrapper {
     position: relative;
     width: 100%;
     .cardImage {
       width: 100%;
-      background-color: black;
+      background-color: #15023A;
       img {
         width: 100%;
-        height: 320px;
+        height: 180px;
         object-fit: cover;
-        
-      
       }
       &:hover {
-        img{
-          opacity: 0.1;
+        img {
+          opacity: 0.4;
         }
-        opacity: 0.8;
+        opacity: 0.99;
         .cardContent {
-          display: block;
+          display: flex;
         }
       }
     }
     .cardContent {
       display: none;
+      align-items: center;
+      justify-content: center;
       position: absolute;
       padding: 5px;
-      top: 50%;
+      top: 40%;
       .cardHeading {
         font-size: 14px;
         font-size: 20px;
