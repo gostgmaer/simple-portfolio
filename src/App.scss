@@ -34,6 +34,7 @@
 }
 
 .app {
+  position: relative;
   ::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
   }
@@ -46,7 +47,7 @@
     height: calc(100vh - 70px);
     top: 70px;
     scroll-snap-type: y mandatory;
-    overflow: scroll;
+    overflow: hidden;
     //scrollbar-width: none;
    
     // &::-webkit-scrollbar{
@@ -57,6 +58,33 @@
       height: calc(100vh - 70px);
       scroll-snap-align:start;
       
+    }
+  }
+  .navigationBullet{
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+
+    ul{
+      flex-direction: column;
+      gap: 5px;
+      li{
+        a{
+          color: #696969;
+         // background-color: #61dafb;
+         .svg{
+          color: #4a4a4a;
+          // background-color: #61dafb;
+         }
+          &:hover{
+            color: #15023A;
+          }
+        }
+      }
     }
   }
 }
