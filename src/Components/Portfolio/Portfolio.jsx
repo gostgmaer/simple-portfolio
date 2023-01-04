@@ -50,16 +50,16 @@ const Portfolio = () => {
             <div className="Pagination">
               <ul>
                 <li
-                  className={(initialSize === 1 && "disable")||(initialSize === 0 && "disable")}
+                  // className={initialSize === 1 && "disable"}
                   onClick={(e) => {
                     setInitialSize(initialSize - 6);
                   }}>
                   Previous
                 </li>
                 <li
-                  className={
-                    (Mock.projectImages.length <= initialSize && "disable") || (Mock.projectImages.length <= initialSize+6 && "disable")
-                  }
+                  // className={
+                  //   Mock.projectImages.length <= initialSize && "disable"
+                  // }
                   onClick={(e) => {
                     setInitialSize(
                       Mock.projectImages.length <= initialSize
