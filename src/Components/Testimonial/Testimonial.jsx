@@ -18,15 +18,12 @@ const Testimonial = () => {
           <div className="content">
             <div className="container">
               <div className="card">
-                <div className="items">
+                {Mock.testimonial.map(data =>{
+                  return <div key={data.id} className="items">
 
-                </div>
-                <div className="items">
-                  
                   </div>
-                  <div className="items">
-                  
-                  </div>
+                })}
+               
               </div>
             </div>
           </div>
