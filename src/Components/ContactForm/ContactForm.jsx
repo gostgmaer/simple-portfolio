@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./contact.scss";
 import { v4 as uuidv4 } from 'uuid';
-
+import { addDoc, collection, doc, serverTimestamp, setDoc } from "firebase/firestore"; 
+import { db } from "../../Services/Apicall/Firebase";
+import { Fragment } from "react";
 
 
 
@@ -11,15 +13,46 @@ const [name, setName] = useState('');
 const [email, setEmail] = useState('');
 const [message, setMessage] = useState('');
 const [info, setInfo] = useState(null);
+const [error, setError] = useState(null);
 
-const submitContact =()=>{
+
+
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+const submitContact = async ()=>{
+  
+ try {
   const data = {
-    name:name,email:email,message:message,uuid:uuidv4()
+    name:name,email:email,message:message,uuid:uuidv4(),creationTime:serverTimestamp()
   }
-  console.log(data);
-  setInfo(data)
+  const res = await addDoc(collection(db, "portfolioContacts"), data);
+  console.log(res);
+  setInfo(res.id)
+ } catch (error) {
+  console.log(error);
+  setError(error.message)
+  
+ }
 
 } 
+
+
+const AfterSubmit =()=>{
+  return (
+   <div className="afterSubmit">{ error?<div className="error">Your Message has Not been Submitted: {error}</div>:<div className="success">your Message has been Submitted Successfully</div>}
+   <div className="tryAgain"><button onClick={()=>{
+    setError(null);setInfo(null)
+   }} className="btn">Send Again</button></div>
+   </div>
+  )
+
+}
 
   return (
     <div className="ContactForm" id="contact">
@@ -29,7 +62,7 @@ const submitContact =()=>{
       <div className="content">
         <div className="container">
           <div className="card">
-            <div className="form-inline">
+            {error||info?<AfterSubmit/>:<div className="form-inline">
             <div className="row">
             <div className="form-group">
                 <input
@@ -67,7 +100,8 @@ const submitContact =()=>{
               <div className="row">
                 <button className="btn" onClick={submitContact}>Send message</button>
               </div>
-            </div>
+            </div>}
+            
           </div>
         </div>
       </div>
