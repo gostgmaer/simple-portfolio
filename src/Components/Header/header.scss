@@ -71,12 +71,14 @@
       .resume {
         button {
           border: none;
-          padding: 5px;
+          padding: 5px 20px;
           border-radius: 10px;
           cursor: pointer;
+          border: 1px solid rgb(8, 74, 243);
           &:hover {
             outline-style: solid;
-            outline-color: rgb(0, 72, 255);
+          color: #fff;
+            background-color: rgb(8, 74, 243);
           }
         }
       }

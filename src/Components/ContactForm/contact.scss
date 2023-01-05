@@ -1,3 +1,142 @@
-.ContactForm{
-    background-color: darkslategray;
+// .ContactForm {
+//   background-color: rgb(220, 220, 220);
+// }
+
+.ContactForm {
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  .heading {
+    position: absolute;
+    top: 20px;
+    color: rgb(0, 0, 0);
+    h2 {
+      // padding-bottom: 100px;
+      font-size: 28px;
+    }
+  }
+  .content {
+    height: 360px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    // left: -200vw;
+    //  transition: 1s all;
+    .container {
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+      .card {
+        width: 780px;
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        justify-content: center;
+        display: flex;
+        // flex-wrap: wrap;
+        // overflow: hidden;
+        gap: 10px;
+        /* flex-direction: row; */
+        align-content: center;
+
+        gap: 10px;
+        .form-inline {
+          width: 75%;
+          height: 100%;
+          background-color: white;
+          border-radius: 20px;
+          justify-content: center;
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+          align-items: center;
+
+          .row {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            button {
+              background-color: rgb(255, 255, 255);
+              border: 1px solid #276afa;
+              color: black;
+              padding: 5px 20px;
+              &:hover {
+                background-color: #276afa;
+                padding: 5px 20px;
+                color: rgb(255, 255, 255);
+              }
+            }
+            // flex-direction: column;
+
+            .form-group {
+              //  margin: 10px;
+              width: 100%;
+              .form-control {
+                display: block;
+                width: 90%;
+                padding: 0.375rem 0.75rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out,
+                  box-shadow 0.15s ease-in-out;
+              }
+              input {
+                //  width: 45%;
+              }
+            }
+            .area {
+              width: 100%;
+              textarea {
+                resize: none;
+                max-height: 65%;
+                resize: vertical;
+                width: 95% !important;
+              }
+              .form-control {
+                resize: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.afterSubmit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-direction: column;
+  gap:20px ;
+  text-transform: capitalize;
+  .error{
+    color:red;
+
+  }
+  .success{
+    color: green;
+
+
+  }
+  .tryAgain{
+    button{
+      background-color: #276afa;
+
+    }
+  }
 }

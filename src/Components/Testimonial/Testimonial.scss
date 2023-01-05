@@ -28,13 +28,18 @@
         display: flex;
     
         .card {
-          width: 780px;
-          height: 100%;
-          background-color: white;
-          border-radius: 20px;
-          align-items: center;
-          justify-content: center;
-          display: flex;
+            width: 780px;
+            height: 100%;
+            background-color: white;
+            border-radius: 20px;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            gap: 10px;
+            /* flex-direction: row; */
+            align-content: center;
+
           gap: 10px;
             .items{
                 height: 100%;
