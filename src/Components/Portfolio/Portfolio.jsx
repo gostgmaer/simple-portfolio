@@ -8,8 +8,8 @@ const Portfolio = () => {
   const [index, setIndex] = useState(1);
 
   useEffect(() => {
-    console.log(tabData);
-  }, [tabData]);
+    console.log(initialSize);
+  }, [initialSize]);
 
   return (
     <div className="Portfolio" id="portfolio">
@@ -31,9 +31,9 @@ const Portfolio = () => {
             </ul>
           </div>
           <div className="projects">
-            {Mock?.projectImages
+            {Mock?.projectImages.results
               ?.slice(
-                Mock.projectImages.length <= initialSize-1
+                Mock.projectImages.results.length <= initialSize
                   ? (initialSize-1) - 6
                   : (initialSize-1),
                 (initialSize-1) + 6
@@ -44,25 +44,25 @@ const Portfolio = () => {
           </div>
           <div className="projectnavigation">
             <div className="totalproject">
-              <div>Total Project: {Mock?.projectImages?.length}</div>
-              <div>Showing: {(initialSize)}-{(initialSize-1)+6} of {Mock?.projectImages?.length}</div>
+              <div>Total Project: {Mock?.projectImages?.results.length}</div>
+              <div>Showing: {(initialSize)}-{(initialSize-1)+6} of {Mock?.projectImages?.results.length}</div>
             </div>
             <div className="Pagination">
               <ul>
                 <li
-                  // className={initialSize === 1 && "disable"}
+                  className={initialSize === 1? "disable":''}
                   onClick={(e) => {
                     setInitialSize(initialSize - 6);
                   }}>
                   Previous
                 </li>
                 <li
-                  // className={
-                  //   Mock.projectImages.length <= initialSize && "disable"
-                  // }
+                  className={
+                    Mock.projectImages.results.length <= initialSize+6 ?"disable":''
+                  }
                   onClick={(e) => {
                     setInitialSize(
-                      Mock.projectImages.length <= initialSize
+                      Mock.projectImages.results.length <= initialSize
                         ? initialSize - 6
                         : initialSize + 6
                     );
