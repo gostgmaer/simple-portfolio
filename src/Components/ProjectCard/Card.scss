@@ -27,15 +27,23 @@
       align-items: center;
       justify-content: center;
       position: absolute;
-      padding: 5px;
+     // padding: 5px;
+     //margin: 0 5px;
+      width: 100%;
       top: 40%;
+     
       .cardHeading {
         font-size: 14px;
-        font-size: 20px;
+        //font-size: 20px;
+        padding: 5px;
+        text-align: center;
         color: white;
+        text-transform: capitalize;
       }
       .Carddetails {
         font-size: 12px;
+        text-align: center;
+        padding: 5px;
       }
     }
   }

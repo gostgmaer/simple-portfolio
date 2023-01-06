@@ -5,29 +5,30 @@ import "./Projects.scss";
 console.log(Mock);
 const Projects = () => {
 
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(0);
 
-  let slidelength = Mock.projectImages.length;
+  let slidelength = Mock.projectImages.results.length;
+  console.log(slidelength);
   return (
     <div className="Projects" id="projects">
       {/* <div className="slider"  style={{ left:`*-${100 * index}%`}}> */}
      <div className="slider"  style={{ left:`-${100 * index}%`}}>
-        {Mock.projectImages.map((item) => {
+        {Mock.projectImages.results.map((item) => {
           return (
             <div key={item.id} className="container">
               <div className="item">
                 <div className="left">
                   <div className="leftContainer">
                     <div className="image">
-                      <img src={item.attributes.user.avatar.medium} alt="" />
+                      <img src={item.user.profile_image.medium} alt="" />
                     </div>
-                    <h2>{item.attributes.slug}</h2>
-                    <p>{item.attributes.updated_at}</p>
+                    <h2>{item.alt_description}</h2>
+                    <p>{item.updated_at}</p>
                     <span>projects</span>
                   </div>
                 </div>
                 <div className="right">
-                  <img src={item.attributes.image.large} alt="" />
+                  <img src={item.urls.regular} alt="" />
                 </div>
               </div>
             </div>
@@ -38,7 +39,7 @@ const Projects = () => {
         <div className="items">
           <MdKeyboardArrowLeft
             onClick={() =>
-              index === 1 ? setIndex(slidelength - 1) : setIndex(index - 1)
+              index < 1 ? setIndex(slidelength - 1) : setIndex(index - 1)
             }></MdKeyboardArrowLeft>
           <MdKeyboardArrowRight
             onClick={() =>

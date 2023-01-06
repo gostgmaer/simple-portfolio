@@ -6,10 +6,10 @@ const Card = ({ item }) => {
     <div className="Card">
       <div className="cardWrapper">
         <div className="cardImage">
-          <img src={item?.attributes.image.large} alt="" />
+          <img src={item?.urls.regular} alt="" />
           <div className="cardContent">
           <span className="cardHeading">
-            <h3>{item?.attributes.slug}</h3>
+            <h3>{item?.alt_description}</h3>
           </span>
           <div className="Carddetails"></div>
         </div>

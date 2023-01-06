@@ -23,14 +23,14 @@ function App() {
         <Intro></Intro>
         <Portfolio></Portfolio>
         <Projects></Projects>
-        <Testimonial></Testimonial>
+        {/* <Testimonial></Testimonial> */}
         <ContactForm></ContactForm>
       </div>
       <div className="navigationBullet">
         <ul>
           {Mock.Navigation.map((item) => (
             <li key={item.id}>
-              <a name={item.text} href={`#${item.url}`}>
+              <a  href={`#${item.url}`}>
                 <MdTripOrigin></MdTripOrigin>
               </a>
             </li>
