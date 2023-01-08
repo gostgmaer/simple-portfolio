@@ -15,7 +15,15 @@ import { Mock } from "../../Assets/Data/Mock/Data";
 const Header = () => {
   const { toggleSidebarShow, toggleSidebar } = useGlobalContext();
 
-  const DownloadResume = () => {};
+  const DownloadResume = (dataurl, filename) => {
+    const link = document.createElement("a");
+    link.href = dataurl;
+    link.download = filename;
+    link.click();
+  };
+ 
+  
+ 
 
   return (
     <header className={`Header ${toggleSidebar&& 'active'}`}>
@@ -37,7 +45,8 @@ const Header = () => {
         </div>
         <div className="headerright">
           <div className="resume">
-            <button onClick={DownloadResume}>Resume</button>
+          {/* <a href="./assets/Sample-Resumes.pdf" rel="noreferrer" target="_blank">Download</a> */}
+            <button onClick={()=> DownloadResume("./assets/Sample-Resumes.pdf", "Sample-Resumes.pdf")}>Resume</button>
           </div>
           <div className="hamburger">
             {toggleSidebar ? (

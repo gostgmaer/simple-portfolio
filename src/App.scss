@@ -74,15 +74,31 @@
       gap: 5px;
       li{
         a{
+          animation:bulletBlink 3s infinite;
           color: #696969;
          // background-color: #61dafb;
          .svg{
           color: #4a4a4a;
           // background-color: #61dafb;
+          
          }
           &:hover{
             color: #15023A;
+            opacity: 1;
+            animation:none;
           }
+        }
+        @keyframes bulletBlink {
+          from {
+            opacity: 1;
+           // color: rgb(252, 115, 4);
+           }
+           to {
+           //  transform: rotate(360deg);
+             opacity: 0.3;
+            // color: rgb(252, 115, 4);
+           }
+          
         }
       }
     }
